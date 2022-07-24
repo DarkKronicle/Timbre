@@ -1,0 +1,10 @@
+# Config 
+
+# Please update frontend/types/configTypes.d.ts whenever this changes layout
+
+# Frontend
+[frontend]
+
+http_port = 80  
+https_port = 443
+websocket_port = 3001
