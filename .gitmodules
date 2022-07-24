@@ -1,3 +1,0 @@
-[submodule "backend/playlistgen"]
-	path = backend/playlistgen
-	url = https://github.com/DarkKronicle/SpotifyPlaylistGenerator.git
