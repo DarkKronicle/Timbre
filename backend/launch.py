@@ -1,8 +1,11 @@
 import generator
+import server
+import asyncio
 
 
 def run():
-    generator.setup()
+    back = server.Server()
+    asyncio.run(back.run_server())
 
 
 if __name__ == '__main__':
