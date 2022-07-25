@@ -8,7 +8,7 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "test": "sirv public --no-clear --host",
-    "start": "node server/index.js"
+    "start": "tsc && node server/index.js"
   },
   "keywords": [],
   "author": "",
