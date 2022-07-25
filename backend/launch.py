@@ -1,10 +1,13 @@
 import generator
 import server
 import asyncio
+from config import Config
+import pathlib
 
 
 def run():
-    back = server.Server()
+    config = Config(pathlib.Path('../config.toml'))
+    back = server.Server(config['backend']['websocket_port'])
     asyncio.run(back.run_server())
 
 
