@@ -12,3 +12,6 @@ websocket_port = 3001
 [backend]
 
 websocket_port = 3001
+client_id = 'ID'
+client_secret = 'SECRET'
+redirect_uri = 'https://localhost:8888/callback'

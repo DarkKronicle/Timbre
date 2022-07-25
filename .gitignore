@@ -314,3 +314,5 @@ cython_debug/
 frontend/**/*.js
 frontend/**/*.js.map
 
+.idea
+config.toml
