@@ -1,0 +1,58 @@
+[[instructions]]
+    name = 'saved_tracks'
+    pretty_name = 'Saved Tracks'
+    return = 'list:track'
+    description = 'Fetches songs from a users saved tracks'
+  [[instructions.parameter]]
+    name = 'amount'
+    type = 'int'
+    optional = true
+    description = 'Amount of songs to get. If -1 all'
+  [[instructions.parameter]]
+    name = 'random_sample'
+    type = 'int'
+    optional = true
+    description = 'Random sample to get. If -1 all'
+  [[instructions.parameter]]
+    name = 'artist'
+    type = 'artist'
+    optional = true
+    description = 'Artist filter'
+
+[[instructions]]
+    name = 'top_tracks'
+    pretty_name = 'Top Tracks'
+    return = 'list:track'
+    description = 'Fetches top songs that the user listens to'
+  [[instructions.parameter]]
+    name = 'amount'
+    type = 'int'
+    optional = true
+    description = 'Amount of songs to get'
+  [[instructions.parameter]]
+    name = 'term'
+    type = 'string'
+    allowed = ['short', 'medium', 'long']
+    optional = true
+    description = 'The time frame the top tracks are from'
+
+[[instructions]]
+    name = 'top_artists'
+    pretty_name = 'Top Tracks'
+    return = 'list:track'
+    description = 'Fetches top artists that the user listens to'
+  [[instructions.parameter]]
+    name = 'instruction'
+    type = 'instruction'
+    description = 'Instruction to apply for each of the artists. Has to have an artist parameter.'
+  [[instructions.parameter]]
+    name = 'amount'
+    type = 'int'
+    optional = true
+    description = 'Amount of artists to get'
+  [[instructions.parameter]]
+    name = 'term'
+    type = 'string'
+    allowed = ['short', 'medium', 'long']
+    optional = true
+    description = 'The time frame the top tracks are from'

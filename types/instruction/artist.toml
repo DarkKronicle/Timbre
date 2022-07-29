@@ -1,0 +1,52 @@
+[[instructions]]
+    name = 'artist_tracks'
+    pretty_name = 'Artist Tracks'
+    return = 'list:track'
+    description = 'Tracks from an artist'
+  [[instructions.parameter]]
+    name = 'artist'
+    type = 'artist'
+    description = 'Artist to get songs from'
+  [[instructions.parameter]]
+    name = 'fetch'
+    type = 'int'
+    optional = true
+    description = 'Amount of songs to get'
+  [[instructions.parameter]]
+    name = 'fetch'
+    type = 'int'
+    optional = true
+    description = 'Random selection of the fetched songs'
+
+[[instructions]]
+    name = 'artist_top'
+    pretty_name = 'Top Artist Tracks'
+    return = 'list:track'
+    description = 'Top tracks from an artist'
+  [[instructions.parameter]]
+    name = 'artist'
+    type = 'artist'
+    description = 'Artist to get songs from'
+  [[instructions.parameter]]
+    name = 'amount'
+    type = 'int'
+    optional = true
+    description = 'Amount of songs to get. Maximum 10'
+
+[[instructions]]
+    name = 'related_artists'
+    pretty_name = 'Related Artists'
+    return = 'list:track'
+  [[instructions.parameter]]
+    name = 'artist'
+    type = 'artist'
+    description = 'Artist to get songs from'
+  [[instructions.parameter]]
+    name = 'amount'
+    type = 'int'
+    optional = true
+    description = 'Amount of similar artists to get'
+  [[instructions.parameter]]
+    name = 'instruction'
+    type = 'instruction'
+    description = 'Instruction to execute for each artist'
