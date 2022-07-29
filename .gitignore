@@ -311,7 +311,10 @@ cython_debug/
 #custom
 
 #compiled serverside typescript
-frontend/**/*.js
+frontend/server/**/*.js
+frontend/modules/**/*.js
+frontend/src/**/*.js
+frontend/types/*.js
 frontend/**/*.js.map
 
 .idea
