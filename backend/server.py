@@ -33,7 +33,10 @@ class Server:
             response += chunk
         data = response.decode('utf8')
         json_data = json.loads(data)
-        await self.process_data(json_data, writer)
+        if not isinstance(json_data, list):
+            json_data = [json_data]
+        for j in json_data:
+            await self.process_data(j, writer)
         # Drain to be safe
         await writer.drain()
         writer.close()
