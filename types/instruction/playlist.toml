@@ -1,0 +1,19 @@
+[[instructions]]
+    name = 'playlist_tracks'
+    pretty_name = 'Playlist Tracks'
+    return = 'list:track'
+    description = 'Tracks from a playlist'
+  [[instructions.parameter]]
+    name = 'playlist'
+    type = 'playlist'
+    description = 'Playlist to get from'
+  [[instructions.parameter]]
+    name = 'amount'
+    type = 'int'
+    optional = true
+    description = 'Amount of songs to get from playlist. -1 if all'
+  [[instructions.parameter]]
+    name = 'sample'
+    type = 'int'
+    optional = true
+    description = 'Random sample to get from the selected songs. -1 if all'

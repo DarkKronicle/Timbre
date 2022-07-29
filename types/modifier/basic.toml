@@ -1,0 +1,53 @@
+[[modifiers]]
+    name = 'clear_duplicates'
+    pretty_name = 'Clear Duplicates'
+    description = 'Clear duplicate tracks in the list'
+  [[modifiers.parameter]]
+    name = 'active'
+    type = 'bool'
+    description = 'If this is active'
+
+[[modifiers]]
+    name = 'upload'
+    pretty_name = 'Upload'
+    description = 'Upload tracks to a specific playlist name'
+  [[modifiers.parameter]]
+    name = 'name'
+    type = 'string'
+    description = 'Name of playlist to upload to'
+
+[[modifiers]]
+    name = 'remove_artists'
+    pretty_name = 'Remove Artists'
+    description = 'Remove specific artists from list'
+  [[modifiers.parameter]]
+    name = 'artist'
+    type = 'list:artist'
+    description = 'If this is active'
+
+[[modifiers]]
+    name = 'remove_from_playlist'
+    pretty_name = 'Remove From Playlist'
+    description = 'Removes tracks found in another playlist'
+  [[modifiers.parameter]]
+    name = 'playlist'
+    type = 'string'
+    description = 'Playlist'
+
+[[modifiers]]
+    name = 'region'
+    pretty_name = 'Region'
+    description = 'Only allow tracks that are allowed in this region'
+  [[modifiers.parameter]]
+    name = 'region'
+    type = 'string'
+    description = 'Region code'
+
+[[modifiers]]
+    name = 'explicit_filter'
+    pretty_name = 'Filter Explicit Songs'
+    description = 'Filter songs by their explicit value'
+  [[modifiers.parameter]]
+    name = 'explicit'
+    type = 'bool'
+    description = 'Explicit or not'

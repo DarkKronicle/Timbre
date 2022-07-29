@@ -1,0 +1,78 @@
+[[modifiers]]
+    name = 'audio_sort'
+    pretty_name = 'Sort by audio'
+    description = 'Only allow tracks that are allowed in this region'
+  [[modifiers.parameter]]
+    name = 'method'
+    type = 'string'
+    allowed = [
+        'tempo', 'energy', 'loudness', 'danceability', 'valence', 'speechiness', 'acousticness', 'traveling'
+    ]
+    description = 'Type to sort by'
+  [[modifiers.parameter]]
+    name = 'reverse'
+    type = 'bool'
+    optional = true
+    description = 'Reverse the final sort'
+  [[modifiers.parameter]]
+    name = 'attributes'
+    optional = true
+    type = 'list:string'
+    allowed = [
+        'tempo', 'energy', 'loudness', 'danceability', 'valence', 'speechiness', 'acousticness'
+    ]
+    description = 'Attributes for traveling salesman'
+
+[[modifiers]]
+    name = 'separate'
+    pretty_name = 'Separate and Create'
+    description = 'Separate songs by similarity and then construct playlists on that'
+  [[modifiers.parameter]]
+    name = 'instruction'
+    type = 'instruction'
+    description = 'Instruction to apply to songs'
+  [[modifiers.parameter]]
+    name = 'n'
+    type = 'int'
+    description = 'Amount of gruops to create. If below 0 it is automatic. Maximum 10.'
+   [[modifiers.parameter]]
+    name = 'title'
+    type = 'string'
+    description = 'Title with a {0} in it to format the name. {0} is replaced with index.'
+  [[modifiers.parameter]]
+    optional = true
+    name = 'modifiers'
+    type = 'list:modifier'
+    description = 'Modifiers to apply to the batches of songs'
+
+[[modifiers]]
+    name = 'sort'
+    pretty_name = 'Basic Sort'
+    description = 'Sort songs by simple terms'
+  [[modifiers.parameter]]
+    name = 'method'
+    type = 'string'
+    allowed = ['alphabetical', 'duration', 'album', 'artist']
+    description = 'Explicit or not'
+  [[modifiers.parameter]]
+    name = 'reverse'
+    type = 'bool'
+    optional = true
+    description = 'Reverse the final sort'
+
+[[modifiers]]
+    name = 'similar'
+    pretty_name = 'Sort by and add Similar'
+    description = 'Takes input tracks and groups together ones most similar to a supplied list. The list then gets added on top.'
+  [[modifiers.parameter]]
+    name = 'tracks'
+    type = 'list:track'
+    description = 'Tracks to add and then sort'
+  [[modifiers.parameter]]
+    name = 'attributes'
+    optional = true
+    type = 'list:string'
+    allowed = [
+        'tempo', 'energy', 'loudness', 'danceability', 'valence', 'speechiness', 'acousticness'
+    ]
+    description = 'Attributes for similarity'

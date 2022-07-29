@@ -1,0 +1,55 @@
+[[instructions]]
+    name = 'recommendations'
+    pretty_name = 'Recommendations'
+    return = 'list:track'
+    description = 'Get recommendations from a seed'
+  [[instructions.parameter]]
+    name = 'tracks'
+    type = 'list:track'
+    description = 'Tracks for the seed'
+    optional = true
+  [[instructions.parameter]]
+    name = 'artists'
+    type = 'list:artist'
+    description = 'Artists for the seed'
+    optional = true
+  [[instructions.parameter]]
+    name = 'genres'
+    type = 'list:string'
+    description = 'Genres for the seed'
+    optional = true
+  [[instructions.parameter]]
+    name = 'attributes'
+    type = 'dict'
+    description = 'Other attributes spotify allows for recommendations'
+    optional = true
+  [[instructions.parameter]]
+    name = 'limit'
+    type = 'int'
+    optional = true
+    description = 'Amount of songs to get maximum'
+
+[[instructions]]
+    name = 'generate'
+    pretty_name = 'Generate from Tracks'
+    return = 'list:track'
+    description = 'Generates tracks from a list of tracks'
+  [[instructions.parameter]]
+    name = 'tracks'
+    type = 'list:track'
+    description = 'Tracks to generate from'
+  [[instructions.parameter]]
+    name = 'amount'
+    type = 'int'
+    optional = true
+    description = 'Amount of songs to generate'
+  [[instructions.parameter]]
+    name = 'random_sample'
+    type = 'bool'
+    optional = true
+    description = 'If the seeds should be chosen at random'
+  [[instructions.parameter]]
+    name = 'mix_same'
+    type = 'bool'
+    optional = true
+    description = 'If some of the provided tracks should be mixed in'

@@ -1,0 +1,24 @@
+[[instructions]]
+    name = 'search'
+    pretty_name = 'Search Tracks'
+    return = 'list:track'
+    description = 'Searches based off of a query'
+  [[instructions.parameter]]
+    name = 'search'
+    type = 'string'
+    description = 'Query to be provided'
+  [[instructions.parameter]]
+    name = 'limit'
+    type = 'int'
+    optional = true
+    description = 'Maximum tracks to get'
+  [[instructions.parameter]]
+    name = 'sample'
+    type = 'int'
+    optional = true
+    description = 'Random amount to get from the search'
+  [[instructions.parameter]]
+    name = 'offset'
+    type = 'int'
+    optional = true
+    description = 'Offset amount from beginning of search'
