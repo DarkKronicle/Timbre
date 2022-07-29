@@ -8,4 +8,19 @@ declare namespace App {
 	// interface Platform {}
 	// interface Session {}
 	// interface Stuff {}
+
+	interface Config {
+		frontend: {
+			http_port: number;
+			https_port: number;
+			websocket_port: number;
+		},
+		backend: {
+			websocket_port: number;
+			client_id: string;
+			client_secret: string;
+			redirect_uri: string;
+			scope: string;
+		}
+	}
 }
