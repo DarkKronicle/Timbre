@@ -14,6 +14,7 @@
 	{#each navigation as link}
 		<a id={link.name.toLowerCase()} href={link.link}> {link.name}</a>
 	{/each}
+    <a id="login">Login</a>
 </nav>
 
 <style>
@@ -43,13 +44,24 @@
 		font-weight: 600;
 		font-size: 1.075rem;
 		padding: 0 0.75rem;
-		transition: color 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
 	}
-	:global(nav > a.selected) {
-		color: var(--color-white) !important;
-	}
-	nav > a:hover {
+    nav > a:hover {
 		color: var(--color-white);
 		transform: scale(1.04);
+	}
+    nav > #login {
+        cursor: pointer;
+        color: #000;
+        padding: 0.35rem 0.75rem;
+		margin: 0 0.75rem;
+        background-color: var(--text-subdued);
+        border-radius: 100vmax;
+    }
+    nav > #login:hover {
+        background-color: var(--color-white);
+    }
+	:global(nav > a.selected) {
+		color: var(--color-white) !important;
 	}
 </style>
