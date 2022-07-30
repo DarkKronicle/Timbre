@@ -14,6 +14,7 @@
 	{#each navigation as link}
 		<a id={link.name.toLowerCase()} href={link.link}> {link.name}</a>
 	{/each}
+    <div class="w-0.5 h-8 bg-white"></div>
     <a id="login">Login</a>
 </nav>
 
@@ -60,6 +61,7 @@
     }
     nav > #login:hover {
         background-color: var(--color-white);
+        color: var(--color-primary);
     }
 	:global(nav > a.selected) {
 		color: var(--color-white) !important;
