@@ -7,15 +7,29 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url      = "file:./database.db"
+}
+
+model State {
+  id      Int      @id @default(autoincrement())
+  state   String
+  expires DateTime
+}
+
+model Token {
+  id           Int      @id @default(autoincrement())
+  accessToken  String
+  refreshToken String
+  expires      DateTime
+
+  User   User?
 }
 
 model User {
-  id          String @id @default(cuid())
-}
+  id       Int    @id @default(autoincrement())
+  username String
+  token    Token? @relation(fields: [tokenId], references: [id])
+  tokenId  Int    @unique
 
-model AuthCode {
-  id          String @id @default(cuid())
-  code        String
-  createdAt   DateTime @default(now())
+  spotifyId String @unique
 }
