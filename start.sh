@@ -1,8 +1,3 @@
 #! /bin/bash
 
-#Start backend
-python ./backend/launch.py
-
-#Start frontend
-cd frontend
-npm run start
+(trap 'kill 0' SIGINT; python ./backend/launch.py & cd frontend; npm run start)

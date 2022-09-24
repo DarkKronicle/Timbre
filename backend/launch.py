@@ -13,10 +13,10 @@ sp: tk.Spotify = None
 def run():
     global config, cred, sp
 
-    config = Config(pathlib.Path('../config.toml'))
-    tk.client_id_var = config['client_id']
-    tk.client_secret_var = config['client_secret']
-    tk.redirect_uri_var = config['redirect_uri']
+    config = Config(pathlib.Path('./config.toml'))
+    tk.client_id_var = config['backend']['client_id']
+    tk.client_secret_var = config['backend']['client_secret']
+    tk.redirect_uri_var = config['backend']['redirect_uri']
 
     back = server.Server(config['backend']['websocket_port'])
     asyncio.run(back.run_server())
